@@ -39,7 +39,7 @@ setPwm() {
 
 fixSysFan() {
     echo "Setting fan control to automatic mode"
-    $ipmicmd rraw 0x0e 0x65 1 0x64
+    $ipmicmd raw 0x0e 0x65 1 0x64
     if [ $? -eq 0 ]; then
         echo "Fan control set to automatic mode successfully."
     else

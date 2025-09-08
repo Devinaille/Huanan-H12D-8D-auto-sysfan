@@ -1,0 +1,13 @@
+[Unit]
+Description=control HUANAN h12d-8d via ipmitool
+After=network.target
+
+[Service]
+ExecStart=/opt/autofan/autofan.sh auto
+# ExecStop=kill $MAINPID
+ExecStop=/opt/autofan/autofan.sh fixed
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+Alias=autofan.service
