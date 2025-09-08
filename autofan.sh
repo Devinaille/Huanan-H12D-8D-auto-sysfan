@@ -66,6 +66,7 @@ setAuto() {
         fi
         
         if [[ $pwm_value -ne $current_pwm ]]; then
+            
             setPwm $pwm_value
             current_pwm=$pwm_value
         else
@@ -82,8 +83,6 @@ current_pwm=0
 host=192.168.100.8
 user=admin
 passwd=admin
-# set default pwn
-current_pwm=20
 
 ipmicmd="ipmitool -I lanplus -H $host -U $user -P $passwd "
 checkIPMITool
