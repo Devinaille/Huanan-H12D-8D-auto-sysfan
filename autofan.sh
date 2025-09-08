@@ -80,11 +80,12 @@ setAuto() {
 
 inlet_temp=0
 current_pwm=0
-host=192.168.100.8
+host=ipaddress
 user=admin
 passwd=admin
 
-ipmicmd="ipmitool -I lanplus -H $host -U $user -P $passwd "
+# ipmicmd="ipmitool -I lanplus -H $host -U $user -P $passwd "
+ipmicmd="ipmitool"
 checkIPMITool
 # getInletTemp
 # echo $temp
